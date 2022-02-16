@@ -553,10 +553,18 @@ impl<'a> App<'a> {
                         code: KeyCode::Up,
                         modifiers: KeyModifiers::NONE,
                     }) => self.input_key_up(),
+                    Event::Key(KeyEvent {
+                        code: KeyCode::Char('k'),
+                        modifiers: KeyModifiers::NONE,
+                    }) => self.input_key_up(),
 
                     // down
                     Event::Key(KeyEvent {
                         code: KeyCode::Down,
+                        modifiers: KeyModifiers::NONE,
+                    }) => self.input_key_down(),
+                    Event::Key(KeyEvent {
+                        code: KeyCode::Char('j'),
                         modifiers: KeyModifiers::NONE,
                     }) => self.input_key_down(),
 
